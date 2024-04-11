@@ -19,6 +19,8 @@ def v_chr_srvc():
         print("[ERROR (psutil.NoSuchProcess)] CHR-RDP service is not installed on this machine.")
         print("make sure that CHR-RDP application is installed.")
 
+    return 0
+
 
 # make sure that Wi-Fi interface is present and active.
 def v_net_interface():
