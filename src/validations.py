@@ -1,4 +1,5 @@
 import json
+import subprocess
 import psutil
 from sysconfig import (get_platform)
 
@@ -72,5 +73,17 @@ def v_net_interface(verbose = False):
 
 # make sure that the current Wi-Fi is working and can reach to "https://gmail.com/".
 # This can be done by using a simple ICMP ping. Also the ping will happen after connecting to Wi-Fi.
-def v_net_ping():
-    pass
+def v_net_ping(count = 2, dns_or_ip = "gmail.com", verbose = False):
+    try:
+        output = subprocess.check_output("ping -n {} {}".format(count, dns_or_ip), shell=True)
+
+        if verbose:
+            output = "\n".join((output.decode()).splitlines())
+            print(output)
+
+        return 0
+
+    except Exception as _:
+        print(f"Cannot ping {dns_or_ip}. Might need to switch Wi-Fi.")
+    
+    return 1
