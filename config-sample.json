@@ -7,5 +7,7 @@
     ],
     "log_file_path": "path/to/log.txt",
     "verbose": false,
-    "wait_time_for_wifi_switching": "3m"
+    "wait_time_for_wifi_switching": "3m",
+    "restart_system_when_uptime": "3d",
+    "try_main_wifi_count": 4
 }
