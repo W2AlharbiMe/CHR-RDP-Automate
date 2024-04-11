@@ -30,8 +30,8 @@ def v_chr_srvc():
 make sure that Wi-Fi interface is present and active.
 
 0 is returned:
---- a. try to restart the network interface without restart.
---- b. restart machine if needed
+--- a. try to restart the network interface without a full system restart.
+--- b. full system restart if needed
 
 1 is returned:
 --- a. try to connect to a network from the list.
