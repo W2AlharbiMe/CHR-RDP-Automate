@@ -17,13 +17,13 @@ def v_chr_srvc():
     try:
         psutil.win_service_get('CHRRDP')
 
-        return 1
+        return 0
 
     except psutil.NoSuchProcess as _:
         print("[ERROR (psutil.NoSuchProcess)] CHR-RDP service is not installed on this machine.")
         print("make sure that CHR-RDP application is installed.")
 
-    return 0
+    return 1
 
 
 
