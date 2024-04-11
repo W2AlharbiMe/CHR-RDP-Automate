@@ -1,9 +1,9 @@
 {
     "service_name": "CHRRDP",
-    "main_wifi_target": "Abdullah",
+    "main_wifi_target": ["Abdullah", "192.168"],
     "failover_wifi": [
-        "wifi-1",
-        "wifi-2"
+        ["wifi-1", "192.168"],
+        ["wifi-2", "192.168"]
     ],
     "log_file_path": "path/to/log.txt",
     "private_ip_starts_with": "192.168",
