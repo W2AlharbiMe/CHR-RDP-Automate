@@ -15,11 +15,9 @@ def v_chr_srvc():
 
         return 1
 
-    except psutil.NoSuchProcess as e:
+    except psutil.NoSuchProcess as _:
         print("[ERROR (psutil.NoSuchProcess)] CHR-RDP service is not installed on this machine.")
         print("make sure that CHR-RDP application is installed.")
-
-    return 0
 
 
 # make sure that Wi-Fi interface is present and active.
