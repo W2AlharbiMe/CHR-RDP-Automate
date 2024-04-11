@@ -7,5 +7,6 @@
     ],
     "log_file_path": "path/to/log.txt",
     "private_ip_starts_with": "192.168",
-    "verbose": false
+    "verbose": false,
+    "wait_time_for_wifi_switching": "3m"
 }
