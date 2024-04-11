@@ -4,11 +4,9 @@ from datetime import timedelta
 # this will be used to restart the system based on "restart_system_when_uptime".
 def uptime():
     lib = ctypes.windll.kernel32
-    t = lib.GetTickCount64()
-    t = int(str(t)[:-3])
+    t = int(str(lib.GetTickCount64())[:-3]) 
 
     return timedelta(seconds=t)
-
 
 
 """
