@@ -1,4 +1,5 @@
 {
+    "service_name": "CHRRDP",
     "main_wifi_target": "Abdullah",
     "failover_wifi": [
         "wifi-1",
